@@ -81,7 +81,7 @@ A heatmap shows correlations between variables.
 - **Economy, Health, and Family** strongly correlate with better (lower) Happiness Rank.  
 
 *Example plot:*  
-![Correlation Matrix](plots/correlation_matrix.png)  
+![Correlation Matrix](images/correlation.png)  
 
 ---
 
@@ -91,7 +91,7 @@ Random Forest model highlights the **most important predictors**:
 - Health (Life Expectancy) ❤️  
 
 *Example plot:*  
-![Feature Importance](plots/feature_importance.png)  
+![Feature Importance](images/featureimp.png)  
 
 ---
 
