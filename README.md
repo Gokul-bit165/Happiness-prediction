@@ -97,7 +97,7 @@ Random Forest model highlights the **most important predictors**:
 
 ### 3️⃣ Interactive App UI
 *Example screenshot:*  
-![App Screenshot](images/Screenshot.png)  
+![App Screenshot](images/screenshot.png)  
 
 ---
 
