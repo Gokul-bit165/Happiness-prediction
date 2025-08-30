@@ -3,12 +3,9 @@ import pandas as pd
 import joblib
 import numpy as np
 
-# Load the trained model
 model = joblib.load('best_model.pkl')
 
-# Define the prediction function
 def predict_happiness(economy, family, health, freedom, trust, generosity):
-    # Create a DataFrame for the input
     input_data = pd.DataFrame({
         'Economy (GDP per Capita)': [economy],
         'Family': [family],
@@ -18,11 +15,9 @@ def predict_happiness(economy, family, health, freedom, trust, generosity):
         'Generosity': [generosity]
     })
     
-    # Make a prediction
     prediction = model.predict(input_data)[0]
     predicted_rank = int(round(prediction))
     
-    # Determine the qualitative label
     if predicted_rank <= 30:
         label = "Very High 😊"
     elif predicted_rank <= 60:
@@ -34,7 +29,6 @@ def predict_happiness(economy, family, health, freedom, trust, generosity):
     else:
         label = "Very Low 😞"
         
-    # Prepare data for the bar plot
     plot_data = pd.DataFrame({
         'Factor': ['Economy', 'Family', 'Health', 'Freedom', 'Trust', 'Generosity'],
         'Value': [economy, family, health, freedom, trust, generosity]
@@ -42,7 +36,6 @@ def predict_happiness(economy, family, health, freedom, trust, generosity):
 
     return f"{predicted_rank}", label, plot_data
 
-# Define the Gradio interface
 with gr.Blocks(theme=gr.themes.Soft(primary_hue="sky", secondary_hue="rose")) as demo:
     gr.Markdown(
         """
@@ -94,10 +87,8 @@ with gr.Blocks(theme=gr.themes.Soft(primary_hue="sky", secondary_hue="rose")) as
                 min_width=400,
             )
 
-    # Trigger updates on slider changes
     for slider in inputs:
         slider.release(predict_happiness, inputs=inputs, outputs=[output_rank, output_label, output_plot])
 
-# Launch the app
 demo.launch()
 
