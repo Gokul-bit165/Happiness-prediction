@@ -6,7 +6,7 @@ The app features an **interactive web interface** built with **Gradio**, allowin
 
 ---
 ## LIVE LINK
-    # [Live link](https://huggingface.co/spaces/GokulV/happines-prediction)  
+    https://huggingface.co/spaces/GokulV/happines-prediction  
 
 ## 🚀 Features
 
