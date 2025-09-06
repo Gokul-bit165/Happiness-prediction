@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 import numpy as np
 
-model = joblib.load('best_model.pkl')
+model = joblib.load('happiness-model.pkl')
 
 def predict_happiness(economy, family, health, freedom, trust, generosity):
     input_data = pd.DataFrame({
