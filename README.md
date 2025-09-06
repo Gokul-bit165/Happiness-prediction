@@ -5,6 +5,8 @@ This project is a **machine learning application** that predicts the **World Hap
 The app features an **interactive web interface** built with **Gradio**, allowing users to adjust input factors and see the predicted happiness rank in **real-time**.  
 
 ---
+## LIVE LINK
+    # [Live link](https://huggingface.co/spaces/GokulV/happines-prediction)  
 
 ## 🚀 Features
 
